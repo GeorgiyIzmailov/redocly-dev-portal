@@ -14,10 +14,9 @@ const addInkeepWidget = () => {
       const inkeepDiv = document.createElement("div");
       inkeepDiv.id = "inkeep";
       inkeepDiv.style.position = "absolute";
-
       document.body.appendChild(inkeepDiv);
-      
-      const inkeepWidget = Inkeep().embed({
+
+      const config = {
           componentType: "ChatButton", // required, options: 'ChatButton', 'EmbeddedChat', 'SearchBar', 'CustomTrigger'
           targetElement: document.getElementById("inkeep"), // required, HTML element to render the widget into
           properties: {
@@ -63,7 +62,9 @@ const addInkeepWidget = () => {
                   // optional
               },
           },
-      });
+      }
+      
+      Inkeep().embed(config);
   `;
 
   document.body.appendChild(inkeepWidgetScript);
