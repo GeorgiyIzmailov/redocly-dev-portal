@@ -23,8 +23,8 @@ stylesheets:
   # ga:
   # note that GA doesn't work in the development environment
   #  trackingId: UA-45997213-1
-#scripts:
-#  - ./static/intercom.js
+scripts:
+ - ./static/addInkeep.js
 nav:
 
   - label: Training exercises
